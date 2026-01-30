@@ -1,0 +1,56 @@
+title           - string - 255      - varchar
+description.    - string - 500      - longtext
+image           - string - 255      - varchar
+price           - number - 20.4     - decimal
+quantity        - number - 10       - int
+id              - number            - biginteger
+created_at      - time              - timestamp
+updated_at      - time              - timestamp
+================================================
+
+
+primary key = unique identifiar. each table can carry only one pk. by default auto increment (optional)
+foreign key =
+unique key =
+
+Table users
+    id biginteger [PK]
+    name varchar(255)
+    email varchar (255) [unique]
+    created_at timestamp
+    updated_at timestamp
+
+Table products
+    id biginteger [PK]
+    title varchar(255)
+    description longtext()
+    image varchar(255)
+    price decimal(20,2)
+    quantity int(255)
+    created_at timestamp
+    updated_at timestamp
+
+Table orders
+    id biginteger [PK]
+    user_id biginteger [ref > users.id]
+    product_id biginteger [ref > products.id]
+    created_at timestamp
+    updated_at timestamp
+
+
+Database Variables.
+===================
+varchar     - 255
+text        - 500
+longtext    - 1000
+tinyint     - 4
+int         - 255
+float       - 255 (.)
+decimal     - 255 (.5555)
+biginteger  - 1000
+boolean     - 1/0          // 1 = true, 0 = false
+null        - null
+timestamp   - utc timezone
+date        - date
+datetime    - timezone
+json        - {}
